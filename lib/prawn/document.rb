@@ -152,6 +152,10 @@ module Prawn
        @skip_encoding   = options[:skip_encoding]
        @background      = options[:background]
        @font_size       = 12
+       @header_start_on_page = 1
+       @footer_start_on_page = 1
+       
+       text_options.update(options[:text_options] || {})
 
        @text_options = options[:text_options] || {}
 
